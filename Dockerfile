@@ -33,5 +33,7 @@ RUN chown -R appuser:appuser /app
 # Switch to non-root user
 USER appuser
 
+EXPOSE 9099
+
 # Run app using uvicorn server
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "9099"]
