@@ -33,6 +33,7 @@ RUN chown -R appuser:appuser /app
 # Switch to non-root user
 USER appuser
 
+# Port 9099 will be exposed for the app
 EXPOSE 9099
 
 # Run app using uvicorn server
