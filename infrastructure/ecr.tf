@@ -3,6 +3,6 @@ resource "aws_ecr_repository" "ecs_ec2_app" {
   image_scanning_configuration {
     scan_on_push = true
   }
-  image_tag_mutability = "IMMUTABLE"
+  image_tag_mutability = "IMMUTABLE" # make tags write once
   tags = var.tags
 }
